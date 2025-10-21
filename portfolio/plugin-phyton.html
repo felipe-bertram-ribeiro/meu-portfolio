@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plugin Auto Rotas OSM (Overpass) - Felipe Bertram</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">FELIPE</a>
+    <ul class="nav-links">
+      <li><a href="../about.html">SOBRE</a></li>
+      <li><a href="../portfolio.html">PORTFÓLIO</a></li>
+      <li><a href="../contato.html">CONTATO</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="projeto-hero">
+    <div class="hero-texto">
+      <h1>Plugin Auto Rotas OSM (Overpass)</h1>
+      <p>Plugin em Python para o QGIS que realiza consultas automáticas à Overpass API do OpenStreetMap.</p>
+      <p>Permite baixar e filtrar vias (rodovias) de uma área específica, por nome de localidade ou por coordenadas geográficas.</p>
+    </div>
+    <div class="hero-imagem">
+      <img src="../img/Plugin_phyton_inicial.png" alt="Plugin Auto Rotas OSM - Tela Principal" class="lightbox-img">
+    </div>
+  </section>
+
+  <!-- Descrição -->
+  <section class="projeto-descricao fade-in">
+    <h2>Sobre o Projeto</h2>
+    <p>O <strong>Auto Rotas OSM (Overpass)</strong> é um plugin desenvolvido em Python para o QGIS que permite baixar dados de vias (roads) do OpenStreetMap (OSM) utilizando a <strong>Overpass API</strong>. Ele oferece duas formas de definir a área de interesse: por nome (exemplo: "Curitiba, Brazil") ou por coordenadas geográficas (xmin, ymin, xmax, ymax).</p>
+    <p>Após a definição da área, o usuário pode escolher quais tipos de rodovias deseja incluir (por exemplo: primary, secondary, residential, etc.), e o plugin processa automaticamente a consulta, gerando uma camada de linhas no QGIS para análise e visualização.</p>
+
+    <h3>Funcionalidades principais:</h3>
+    <ul>
+      <li>Seleção de área por nome de localidade (usando o serviço Nominatim)</li>
+      <li>Seleção de área por extensão geográfica (coordenadas mínimas e máximas)</li>
+      <li>Filtro por tipos de rodovias do OpenStreetMap</li>
+      <li>Consulta automática à Overpass API e processamento dos resultados</li>
+      <li>Criação de camada de saída com vias filtradas no formato LineString</li>
+    </ul>
+  </section>
+
+  <!-- Tecnologias -->
+  <section class="projeto-tecnologias fade-in">
+    <h2>Tecnologias Usadas</h2>
+    <div class="tech-grid">
+      <span>Python</span>
+      <span>QGIS</span>
+      <span>Overpass API</span>
+      <span>OpenStreetMap</span>
+      <span>PyQt5</span>
+      <span>JSON</span>
+    </div>
+  </section>
+
+  <!-- Como usar -->
+  <section class="projeto-descricao fade-in">
+    <h2>Como Usar</h2>
+    <ol>
+      <li>Instale o plugin através do repositório oficial de plugins do QGIS.</li>
+      <li>Abra o QGIS e acesse o Menu de Processamento.</li>
+      <li>Procure pelo algoritmo <strong>Auto Rotas OSM (Overpass)</strong>.</li>
+      <li>Escolha o método de seleção da área (por nome ou por extensão).</li>
+      <li>Defina os tipos de rodovias que deseja filtrar.</li>
+      <li>Execute o algoritmo e visualize a camada de rodovias gerada.</li>
+    </ol>
+  </section>
+
+  <!-- Exemplo -->
+  <section class="projeto-descricao fade-in">
+    <h2>Exemplo de Uso</h2>
+    <p>Por exemplo, ao definir a área como <strong>"Batel, Curitiba"</strong> e filtrar rodovias dos tipos <strong>primary</strong>, <strong>secondary</strong>, <strong>tertiary</strong> e <strong>residential</strong>, o plugin buscará essas vias dentro da área especificada e criará uma camada de linhas para visualização e análise no QGIS.</p>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="projeto-imagens fade-in">
+    <h2>Screenshots</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="../img/Plugin_phyton_log.png" alt="Interface do Plugin" class="lightbox-img">
+        <p>Interface de log</p>
+      </div>
+      <div class="card">
+        <img src="../img/Plugin_interface.png" alt="Configuração da Área" class="lightbox-img">
+        <p>Configuração da área e filtros de rodovia</p>
+      </div>
+      <div class="card">
+        <img src="../img/Plugin_python_funcionando.png" alt="Resultado da Consulta" class="lightbox-img">
+        <p>Resultado das vias geradas no mapa</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links -->
+  <section class="projeto-links fade-in">
+    <a href="https://github.com/felipe-bertram-ribeiro/PLUGIN-QGIS-AUTOROTAS-OSM" class="btn">Ver no GitHub</a>
+  </section>
+
+  <!-- Voltar -->
+  <section class="projeto-voltar fade-in">
+    <a href="../portfolio.html" class="btn-link">← Voltar para Portfólio</a>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 Felipe Bertram</p>
+    <div class="social-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Email</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox-container">
+    <img id="lightbox-image" src="" alt="Imagem Ampliada">
+  </div>
+
+  <!-- Script -->
+  <script src="../js/script.js"></script>
+</body>
+</html>

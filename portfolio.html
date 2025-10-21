@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio - Felipe Bertram</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Se preferir manter separado, você pode criar ../css/portfolio.css e colocar as regras abaixo lá -->
+</head>
+<body>
+
+  <!-- Navbar (mesma do index) -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">FELIPE</a>
+    <ul class="nav-links">
+      <li><a href="../about.html">SOBRE</a></li>
+      <li><a href="../portfolio.html" class="active">PORTFÓLIO</a></li>
+      <li><a href="../contato.html">CONTATO</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="projeto-hero">
+    <div class="hero-texto">
+      <h1>Portfólio</h1>
+      <p>Selecione um projeto para ver detalhes — C#, Python, QGIS, Web e mais.</p>
+    </div>
+    <div class="hero-imagem">
+      <img src="../img/portfolio_hero.png" alt="Portfólio" />
+    </div>
+  </header>
+
+
+  <!-- Grid de cards -->
+  <main class="portfolio-grid">
+    <!-- Cada .card pode ter data-* com categoria, url do detalhe e github -->
+    <article class="card" data-category="csharp" data-detail="portfolio/livraria-mvc.html" data-github="https://github.com/felipe-bertram-ribeiro/PROJETO-LIVRARIA-MVC">
+      <img src="../img/livraria_tela_principal.png" alt="Livraria MVC">
+      <div class="card-body">
+        <h3>Livraria MVC</h3>
+        <p>Sistema ASP.NET MVC com SQL Server para gerenciamento de livrarias.</p>
+        <div class="card-actions">
+          <button class="btn-link view-detail">Ver detalhes</button>
+          <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/PROJETO-LIVRARIA-MVC" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-category="python" data-detail="portfolio/plugin-phyton.html" data-github="#">
+      <img src="../img/Plugin_python_funcionando.png" alt="Plugin QGIS">
+      <div class="card-body">
+        <h3>Plugin QGIS - NavegarPontos</h3>
+        <p>Plugin em Python para buscar e navegar por pontos em shapefiles no QGIS.</p>
+        <div class="card-actions">
+          <button class="btn-link view-detail">Ver detalhes</button>
+          <a class="small-link" href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-category="web" data-detail="portfolio/auto-rotas.html" data-github="#">
+      <img src="../img/Plugin_python_funcionando.png" alt="Auto Rotas OSM">
+      <div class="card-body">
+        <h3>Auto Rotas OSM</h3>
+        <p>Plugin/solução para baixar e filtrar vias do OpenStreetMap via Overpass API.</p>
+        <div class="card-actions">
+          <button class="btn-link view-detail">Ver detalhes</button>
+          <a class="small-link" href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Exemplo de card extra -->
+    <article class="card" data-category="web" data-detail="#" data-github="#">
+      <img src="../img/projeto3.png" alt="Projeto 3">
+      <div class="card-body">
+        <h3>Projeto 3</h3>
+        <p>Projeto de exemplo — coloque aqui outra descrição curta.</p>
+        <div class="card-actions">
+          <button class="btn-link view-detail">Ver detalhes</button>
+          <a class="small-link" href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- CTA / Ver tudo -->
+  <section class="portfolio-cta">
+    <a href="../index.html" class="btn">← Voltar</a>
+  </section>
+
+  <!-- Modal de detalhes (reutilizável) -->
+  <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-label="Detalhes do projeto">
+    <div class="modal-backdrop" data-action="close"></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" aria-label="Fechar" data-action="close">✕</button>
+      <div class="modal-content">
+        <img id="modal-image" src="" alt="">
+        <div class="modal-info">
+          <h2 id="modal-title">Título do projeto</h2>
+          <p id="modal-desc">Descrição do projeto.</p>
+          <div class="modal-links">
+            <a id="modal-detail" class="btn" href="#" target="_blank" rel="noopener">Abrir detalhe</a>
+            <a id="modal-github" class="btn btn-outline" href="#" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 Felipe Bertram</p>
+    <div class="social-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Email</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/portfolio.js"></script>
+</body>
+</html>

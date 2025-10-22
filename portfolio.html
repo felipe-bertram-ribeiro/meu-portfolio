@@ -37,58 +37,62 @@
   </header>
 
 
-  <!-- Grid de cards -->
-  <main class="portfolio-grid">
-    <!-- Cada .card pode ter data-* com categoria, url do detalhe e github -->
-    <article class="card" data-category="csharp" data-detail="portfolio/livraria-mvc.html" data-github="https://github.com/felipe-bertram-ribeiro/PROJETO-LIVRARIA-MVC">
-      <img src="../img/livraria_tela_principal.png" alt="Livraria MVC">
-      <div class="card-body">
-        <h3>Livraria MVC</h3>
-        <p>Sistema ASP.NET MVC com SQL Server para gerenciamento de livrarias.</p>
-        <div class="card-actions">
-          <button class="btn-link view-detail">Ver detalhes</button>
-          <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/PROJETO-LIVRARIA-MVC" target="_blank" rel="noopener">GitHub</a>
-        </div>
+ <!-- Grid de cards -->
+<main class="portfolio-grid">
+  <!-- Livraria MVC -->
+  <article class="card" data-category="csharp" data-github="https://github.com/felipe-bertram-ribeiro/PROJETO-LIVRARIA-MVC">
+    <img src="../img/livraria_tela_principal.png" alt="Livraria MVC">
+    <div class="card-body">
+      <h3>Livraria MVC</h3>
+      <p>Sistema ASP.NET MVC com SQL Server para gerenciamento de livrarias.</p>
+      <div class="card-actions">
+        <!-- Link que leva direto para a página de detalhe -->
+        <a class="btn-link" href="portfolio/livraria-mvc.html">Ver detalhes</a>
+        <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/PROJETO-LIVRARIA-MVC" target="_blank" rel="noopener">GitHub</a>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <article class="card" data-category="python" data-detail="portfolio/plugin-phyton.html" data-github="#">
-      <img src="../img/Plugin_python_funcionando.png" alt="Plugin QGIS">
-      <div class="card-body">
-        <h3>Plugin QGIS - NavegarPontos</h3>
-        <p>Plugin em Python para buscar e navegar por pontos em shapefiles no QGIS.</p>
-        <div class="card-actions">
-          <button class="btn-link view-detail">Ver detalhes</button>
-          <a class="small-link" href="#" target="_blank">GitHub</a>
-        </div>
+  <!-- Plugin QGIS -->
+  <article class="card" data-category="python" data-github="#">
+    <img src="../img/Plugin_python_funcionando.png" alt="Plugin QGIS - NavegarPontos">
+    <div class="card-body">
+      <h3>Plugin QGIS - NavegarPontos</h3>
+      <p>Plugin em Python para buscar e navegar por pontos em shapefiles no QGIS.</p>
+      <div class="card-actions">
+        <a class="btn-link" href="portfolio/plugin-phyton.html">Ver detalhes</a>
+        <a class="small-link" href="#" target="_blank" rel="noopener">GitHub</a>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <article class="card" data-category="web" data-detail="portfolio/auto-rotas.html" data-github="#">
-      <img src="../img/Plugin_python_funcionando.png" alt="Auto Rotas OSM">
-      <div class="card-body">
-        <h3>Auto Rotas OSM</h3>
-        <p>Plugin/solução para baixar e filtrar vias do OpenStreetMap via Overpass API.</p>
-        <div class="card-actions">
-          <button class="btn-link view-detail">Ver detalhes</button>
-          <a class="small-link" href="#" target="_blank">GitHub</a>
-        </div>
+  <!-- Auto Rotas OSM -->
+  <article class="card" data-category="web" data-github="#">
+    <img src="../img/Plugin_python_funcionando.png" alt="Auto Rotas OSM">
+    <div class="card-body">
+      <h3>Auto Rotas OSM</h3>
+      <p>Plugin/solução para baixar e filtrar vias do OpenStreetMap via Overpass API.</p>
+      <div class="card-actions">
+        <a class="btn-link" href="portfolio/auto-rotas.html">Ver detalhes</a>
+        <a class="small-link" href="#" target="_blank" rel="noopener">GitHub</a>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <!-- Exemplo de card extra -->
-    <article class="card" data-category="web" data-detail="#" data-github="#">
-      <img src="../img/projeto3.png" alt="Projeto 3">
-      <div class="card-body">
-        <h3>Projeto 3</h3>
-        <p>Projeto de exemplo — coloque aqui outra descrição curta.</p>
-        <div class="card-actions">
-          <button class="btn-link view-detail">Ver detalhes</button>
-          <a class="small-link" href="#" target="_blank">GitHub</a>
-        </div>
+  <!-- Projeto exemplo -->
+  <article class="card" data-category="web" data-github="#">
+    <img src="../img/projeto3.png" alt="Projeto 3">
+    <div class="card-body">
+      <h3>Projeto 3</h3>
+      <p>Projeto de exemplo — coloque aqui outra descrição curta.</p>
+      <div class="card-actions">
+        <a class="btn-link" href="#">Ver detalhes</a>
+        <a class="small-link" href="#" target="_blank" rel="noopener">GitHub</a>
       </div>
-    </article>
-  </main>
+    </div>
+  </article>
+</main>
+
 
   <!-- CTA / Ver tudo -->
   <section class="portfolio-cta">

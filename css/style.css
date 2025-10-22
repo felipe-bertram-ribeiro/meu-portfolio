@@ -558,6 +558,7 @@ body {
 }
 
 
+
 /* --------- GRID DE CARDS --------- */
 .portfolio-grid {
   padding: 3rem 10%;
@@ -730,5 +731,145 @@ body {
   .hero-imagem { display: none; }
   .projeto-hero { padding: 2.4rem 6%; }
 }
+
+/* ===== Contato ===== */
+.contato {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.contato-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contato-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.contato-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.contato-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.contato-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contato {
+    padding: 60px 6%;
+  }
+
+  .contato h2 {
+    font-size: 1.8rem;
+  }
+
+  .contato-card {
+    padding: 25px 15px;
+  }
+}
+
+/* ===== Sobre ===== */
+.sobre {
+  padding: 80px 10%;
+  background-color: #fafafa;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.sobre-texto {
+  flex: 1 1 450px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+.sobre-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.sobre-texto p {
+  margin-bottom: 18px;
+}
+
+.sobre-imagem {
+  flex: 1 1 350px;
+  text-align: center;
+}
+
+.sobre-imagem img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.sobre-imagem img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sobre {
+    padding: 60px 6%;
+  }
+
+  .sobre-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .sobre-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .sobre-texto p {
+    font-size: 0.95rem;
+  }
+
+  .sobre-imagem img {
+    max-width: 240px;
+    margin-bottom: 25px;
+  }
+}
+
 
 

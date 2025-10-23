@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plugin GeoFoto Copy - Felipe Bertram</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">FELIPE</a>
+    <ul class="nav-links">
+      <li><a href="../about.html">SOBRE</a></li>
+      <li><a href="../portfolio.html">PORTFÓLIO</a></li>
+      <li><a href="../contato.html">CONTATO</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="projeto-hero">
+    <div class="hero-texto">
+      <h1>GeoFoto Copy</h1>
+      <p>Plugin em Python para QGIS que copia fotos georreferenciadas associadas a feições selecionadas.</p>
+      <p>Organiza imagens em pastas de destino por códigos/identificadores (ex: R-1) e exibe progresso e log do processo.</p>
+    </div>
+    <div class="hero-imagem">
+      <img src="../img/GeoFoto_interface.png" alt="GeoFoto Copy - Tela Principal" class="lightbox-img">
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section class="projeto-descricao fade-in">
+    <h2>Sobre o Projeto</h2>
+    <p>O <strong>GeoFoto Copy</strong> é um plugin para QGIS desenvolvido em Python (PyQt5) que automatiza a cópia de fotos georreferenciadas a partir de uma camada vetorial. Ele permite selecionar feições no mapa, ler o nome do arquivo a partir de um campo da camada (padrão: <code>Name</code>), buscar essas imagens em uma pasta de origem e copiá-las para uma pasta de destino organizada por placas ou identificadores.</p>
+    <p>O plugin exibe uma barra de progresso, mantém um log com o status de cada arquivo (copiado / não encontrado) e salva os caminhos usados em <code>config.ini</code> para reutilização posterior.</p>
+  </section>
+
+  <!-- Funcionalidades -->
+  <section class="projeto-descricao fade-in">
+    <h3>Funcionalidades principais:</h3>
+    <ul>
+      <li>Selecionar pasta de origem das fotos</li>
+      <li>Selecionar pasta de destino para cópia</li>
+      <li>Definir código/nome da placa ou feição para subpasta de destino</li>
+      <li>Copiar apenas fotos correspondentes às feições selecionadas na camada</li>
+      <li>Exibir barra de progresso e log de arquivos copiados ou não encontrados</li>
+      <li>Salvar e carregar caminhos de origem e destino automaticamente</li>
+    </ul>
+  </section>
+
+  <!-- Por que criei -->
+  <section class="projeto-descricao fade-in">
+    <h2>Por que criei esse plugin</h2>
+    <p>No meu trabalho, precisávamos copiar fotos georreferenciadas específicas que continham determinados tipos de placa de trânsito. Até então, o processo era totalmente manual: verificávamos o nome da foto na camada, procurávamos o arquivo na pasta de origem e copiávamos para a pasta de destino, o que consumia muito tempo e podia gerar erros.</p>
+    <p>Para automatizar essa tarefa, tive a ideia de criar o <strong>GeoFoto Copy</strong>. Com ele, podemos:</p>
+    <ul>
+      <li>Selecionar as fotos desejadas diretamente na camada do QGIS;</li>
+      <li>Escolher a pasta de origem onde os arquivos estão;</li>
+      <li>Escolher a pasta de destino;</li>
+      <li>Definir o código ou nome da placa (ex: <code>R-1</code>), criando automaticamente uma subpasta se não existir;</li>
+      <li>Caso a pasta já exista, apenas copiar os arquivos selecionados;</li>
+      <li>Visualizar o progresso da cópia e um log detalhado do que foi copiado ou não encontrado.</li>
+    </ul>
+    <p>Além disso, este plugin pode ser expandido para funcionalidades futuras, como:</p>
+    <ul>
+      <li>Filtrar fotos por múltiplos tipos de placas simultaneamente;</li>
+      <li>Renomear arquivos automaticamente com base em atributos da camada;</li>
+      <li>Gerar relatórios com resumo das fotos copiadas por categoria ou data;</li>
+      <li>Integração com bases de dados externas para cruzamento de informações.</li>
+    </ul>
+  </section>
+
+  <!-- Tecnologias -->
+  <section class="projeto-tecnologias fade-in">
+    <h2>Tecnologias Usadas</h2>
+    <div class="tech-grid">
+      <span>Python</span>
+      <span>QGIS</span>
+      <span>PyQt5</span>
+      <span>os</span>
+      <span>shutil</span>
+      <span>configparser</span>
+      <span>Shapefile / Camadas Vetoriais</span>
+    </div>
+  </section>
+
+  <!-- Como usar -->
+  <section class="projeto-descricao fade-in">
+    <h2>Como Usar</h2>
+    <ol>
+      <li>Instale o plugin copiando a pasta para a pasta de plugins do QGIS ou usando o repositório GitHub.</li>
+      <li>Abra o QGIS e carregue a camada vetorial com o campo <code>Name</code> contendo os nomes das fotos.</li>
+      <li>Selecione as feições correspondentes às fotos que deseja copiar.</li>
+      <li>Abra o plugin pelo menu <em>GeoFoto Copy</em>.</li>
+      <li>Escolha a pasta de origem das fotos e a pasta de destino.</li>
+      <li>Digite o código/nome da placa ou feição, que será criada como subpasta dentro do destino.</li>
+      <li>Clique em <strong>Iniciar Cópia</strong> e acompanhe o progresso no log e barra de status.</li>
+    </ol>
+  </section>
+
+  <!-- Exemplo -->
+  <section class="projeto-descricao fade-in">
+    <h2>Exemplo de Uso</h2>
+    <p>Por exemplo, se você tem uma camada com o campo <code>Name</code> contendo <code>IMG_001.jpg</code>, <code>IMG_002.jpg</code> e <code>IMG_003.jpg</code>, selecionando duas feições e executando o plugin com placa <strong>R-1</strong>, ele criará a pasta <code>destino/R-1/</code> e copiará apenas os arquivos encontrados, exibindo no log quais foram copiados e quais não foram encontrados.</p>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="projeto-imagens fade-in">
+    <h2>Screenshots</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="../img/GeoCopy_Exemplo_Selecionado.png" alt="Dialog do Plugin" class="lightbox-img">
+        <p>Dialog com seleção de pastas, campo placa, barra de progresso e log</p>
+      </div>
+      <div class="card">
+        <img src="../img/GeoCopy_log_funcionando.png" alt="Log do Plugin" class="lightbox-img">
+        <p>Log mostrando arquivos copiados e não encontrados</p>
+      </div>
+      <div class="card">
+        <img src="../img/GeoCopy_Exemplo_4fotos.png" alt="Pasta de Destino" class="lightbox-img">
+        <p>Exemplo da pasta de destino contendo a subpasta da placa</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links -->
+  <section class="projeto-links fade-in">
+    <a href="https://github.com/felipe-bertram-ribeiro/GeoFotoCopy" class="btn" target="_blank" rel="noopener noreferrer">
+      Ver no GitHub
+    </a>
+  </section>
+
+  <!-- Voltar -->
+  <section class="projeto-voltar fade-in">
+    <a href="../portfolio.html" class="btn-link">← Voltar para Portfólio</a>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 Felipe Bertram</p>
+    <div class="social-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Email</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox-container">
+    <img id="lightbox-image" src="" alt="Imagem Ampliada">
+  </div>
+
+  <!-- Script -->
+  <script src="../js/script.js"></script>
+</body>
+</html>

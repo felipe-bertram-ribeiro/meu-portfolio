@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leitor de NF-e - Felipe Bertram</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">FELIPE</a>
+    <ul class="nav-links">
+      <li><a href="../about.html">SOBRE</a></li>
+      <li><a href="../portfolio.html">PORTFÓLIO</a></li>
+      <li><a href="../contato.html">CONTATO</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="projeto-hero">
+    <div class="hero-texto">
+      <h1>Leitor de NF-e</h1>
+      <p>Aplicação em Python para leitura de Notas Fiscais Eletrônicas (NF-e) a partir de arquivos XML, geração de relatórios em Excel e interface gráfica moderna e minimalista.</p>
+      <p>Permite extrair e analisar informações de múltiplos XMLs simultaneamente, com filtros de data e valor, além de logs automáticos de erros.</p>
+    </div>
+    <div class="hero-imagem">
+      <img src="../img/leitor_nfe_interface.png" alt="Leitor de NF-e - Interface Principal" class="lightbox-img">
+    </div>
+  </section>
+
+  <!-- Descrição -->
+  <section class="projeto-descricao fade-in">
+    <h2>Sobre o Projeto</h2>
+    <p>O <strong>Leitor de NF-e</strong> foi desenvolvido com o objetivo de automatizar a leitura de Notas Fiscais Eletrônicas (modelo 55 e 65) em formato XML, gerando relatórios detalhados em planilhas Excel de forma rápida e prática.</p>
+    <p>A aplicação possui uma interface simples e intuitiva, construída com <strong>CustomTkinter</strong>, permitindo selecionar pastas, aplicar filtros e gerar relatórios formatados com apenas alguns cliques.</p>
+
+    <h3>Principais Funcionalidades:</h3>
+    <ul>
+      <li>Leitura automática de arquivos XML de NF-e e NFC-e.</li>
+      <li>Interface gráfica moderna e minimalista.</li>
+      <li>Filtros de data de emissão e valor mínimo antes da geração do relatório.</li>
+      <li>Criação de relatórios em Excel com abas de resumo e detalhes dos produtos.</li>
+      <li>Formatação aprimorada: cabeçalhos em negrito, cores alternadas e colunas ajustadas automaticamente.</li>
+      <li>Barra de progresso durante o processamento dos XMLs.</li>
+      <li>Registro de erros e inconsistências no arquivo <code>logs.txt</code>.</li>
+    </ul>
+  </section>
+
+  <!-- Tecnologias -->
+  <section class="projeto-tecnologias fade-in">
+    <h2>Tecnologias Utilizadas</h2>
+    <div class="tech-grid">
+      <span>Python</span>
+      <span>pandas</span>
+      <span>openpyxl</span>
+      <span>lxml</span>
+      <span>customtkinter</span>
+    </div>
+  </section>
+
+  <!-- Como usar -->
+  <section class="projeto-descricao fade-in">
+    <h2>Como Usar</h2>
+    <ol>
+      <li>Baixe ou clone o repositório do projeto.</li>
+      <li>Instale as dependências utilizando o comando:
+        <pre><code>pip install -r requirements.txt</code></pre>
+      </li>
+      <li>Execute o programa principal:
+        <pre><code>python main.py</code></pre>
+      </li>
+      <li>Na interface, selecione a pasta que contém os arquivos XML de NF-e.</li>
+      <li>Defina filtros opcionais de data e valor, se necessário.</li>
+      <li>Clique em <strong>Gerar Relatório</strong> para criar o arquivo Excel.</li>
+      <li>O relatório será salvo automaticamente na pasta <code>relatorio_output</code>.</li>
+    </ol>
+  </section>
+
+  <!-- Estrutura do Relatório -->
+  <section class="projeto-descricao fade-in">
+    <h2>Estrutura do Relatório</h2>
+    <p>O relatório gerado contém duas abas principais:</p>
+    <ul>
+      <li><strong>Resumo:</strong> exibe as notas com chave, emitente, destinatário, data, valor total e número de itens.</li>
+      <li><strong>Detalhes:</strong> lista todos os produtos de cada nota, com descrição, quantidade, valor unitário e valor total do item.</li>
+    </ul>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="projeto-imagens fade-in">
+    <h2>Screenshots</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="../img/leitor_nfe_interface.png" alt="Interface Principal" class="lightbox-img">
+        <p>Interface do aplicativo</p>
+      </div>
+      <div class="card">
+        <img src="../img/leitor_nfe_excel.png" alt="Relatório em Excel" class="lightbox-img">
+        <p>Relatório Excel gerado com abas de resumo e detalhes</p>
+      </div>
+      <div class="card">
+        <img src="../img/leitor_nfe_filtros.png" alt="Filtros de Data e Valor" class="lightbox-img">
+        <p>Filtros de data e valor antes da geração do relatório</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links -->
+  <section class="projeto-links fade-in">
+    <a href="https://github.com/felipe-bertram-ribeiro/LEITOR-NFE" class="btn">Ver no GitHub</a>
+  </section>
+
+  <!-- Voltar -->
+  <section class="projeto-voltar fade-in">
+    <a href="../portfolio.html" class="btn-link">← Voltar para Portfólio</a>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 Felipe Bertram</p>
+    <div class="social-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Email</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox-container">
+    <img id="lightbox-image" src="" alt="Imagem Ampliada">
+  </div>
+
+  <!-- Script -->
+  <script src="../js/script.js"></script>
+</body>
+</html>

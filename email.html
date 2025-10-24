@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato - Felipe Bertram</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/contato.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">FELIPE</a>
+    <ul class="nav-links">
+      <li><a href="../about.html">SOBRE</a></li>
+      <li><a href="../portfolio.html">PORTFÓLIO</a></li>
+      <li><a href="../contato.html" class="active">CONTATO</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="projeto-hero">
+    <div class="hero-texto">
+      <h1>Contato</h1>
+      <p>Envie-me uma mensagem diretamente pelo site.</p>
+    </div>
+    <div class="hero-imagem">
+      <i class="fas fa-envelope fa-8x"></i>
+    </div>
+  </header>
+
+  <!-- Formulário -->
+  <main class="contact-section">
+    <form class="contact-form" action="https://formspree.io/f/mnqykvkp" method="POST">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="_replyto" placeholder="seu@email.com" required>
+
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 Felipe Bertram</p>
+    <div class="social-links">
+      <a href="https://github.com/felipe-bertram-ribeiro" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/felipe-bertram-a1a137390" target="_blank">LinkedIn</a>
+      <a href="mailto:felipebertram3014@gmail.com">Email</a>
+    </div>
+  </footer>
+
+</body>
+</html>

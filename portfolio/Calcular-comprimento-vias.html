@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcular Comprimento das Vias - Avançado - Felipe Bertram</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">FELIPE</a>
+    <ul class="nav-links">
+      <li><a href="../about.html">SOBRE</a></li>
+      <li><a href="../portfolio.html">PORTFÓLIO</a></li>
+      <li><a href="../contato.html">CONTATO</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="projeto-hero">
+    <div class="hero-texto">
+      <h1>Calcular Comprimento das Vias - Avançado</h1>
+      <p>Plugin QGIS para cálculo de comprimento total e por categoria de vias lineares.</p>
+      <p>Permite calcular o comprimento total das feições, criar campos adicionais com valores individuais e exportar resultados em Shapefile ou CSV.</p>
+    </div>
+    <div class="hero-imagem">
+      <img src="../img/interface_comprimento_vias.png" alt="Calcular Comprimento das Vias - Tela Principal" class="lightbox-img">
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section class="projeto-descricao fade-in">
+    <h2>Sobre o Projeto</h2>
+    <p>O <strong>Calcular Comprimento das Vias - Avançado</strong> é um plugin para QGIS desenvolvido em Python que automatiza o cálculo de comprimento de feições lineares. Ele permite:</p>
+    <ul>
+      <li>Calcular o comprimento total de todas as feições de uma camada;</li>
+      <li>Realizar cálculos agrupados por categoria do campo <code>highway</code>;</li>
+      <li>Criar automaticamente o campo <code>comp_km</code> contendo o comprimento de cada feição;</li>
+      <li>Exportar resultados em Shapefile reprojetado (EPSG:31982) ou CSV.</li>
+    </ul>
+    <p>Os cálculos são feitos no sistema de coordenadas EPSG:31982, garantindo precisão métrica mesmo que a camada original esteja em outro CRS.</p>
+  </section>
+
+  <!-- Funcionalidades -->
+  <section class="projeto-descricao fade-in">
+    <h3>Funcionalidades principais:</h3>
+    <ul>
+      <li>Seleção de camadas vetoriais do tipo linha</li>
+      <li>Cálculo do comprimento total geral em quilômetros</li>
+      <li>Cálculo do comprimento total por categoria do campo <code>highway</code></li>
+      <li>Criação automática do campo <code>comp_km</code> em cada feição</li>
+      <li>Exportação para Shapefile reprojetado (EPSG:31982)</li>
+      <li>Exportação de resultados em CSV</li>
+    </ul>
+  </section>
+
+  <!-- Por que criei -->
+  <section class="projeto-descricao fade-in">
+    <h2>Por que criei esse plugin</h2>
+    <p>No meu trabalho, precisávamos calcular manualmente o comprimento de vias lineares e agrupar por categoria, o que era demorado e sujeito a erros. Para automatizar esse processo, criei o <strong>Calcular Comprimento das Vias</strong>, permitindo:</p>
+    <ul>
+      <li>Selecionar a camada desejada diretamente no QGIS;</li>
+      <li>Escolher entre cálculo total ou por categoria;</li>
+      <li>Gerar campo adicional com comprimento individual de cada feição;</li>
+      <li>Exportar resultados facilmente em CSV ou Shapefile.</li>
+    </ul>
+  </section>
+
+  <!-- Tecnologias -->
+  <section class="projeto-tecnologias fade-in">
+    <h2>Tecnologias Usadas</h2>
+    <div class="tech-grid">
+      <span>Python</span>
+      <span>QGIS</span>
+      <span>PyQt5</span>
+      <span>Shapefile / Camadas Vetoriais</span>
+      <span>CRS EPSG:31982</span>
+    </div>
+  </section>
+
+  <!-- Como usar -->
+  <section class="projeto-descricao fade-in">
+    <h2>Como Usar</h2>
+    <ol>
+      <li>Instale o plugin copiando a pasta para a pasta de plugins do QGIS ou usando o repositório GitHub.</li>
+      <li>Abra o QGIS e carregue a camada vetorial contendo feições lineares.</li>
+      <li>Abra o plugin pelo menu <em>Calcular Comprimento das Vias</em>.</li>
+      <li>Selecione a camada desejada e escolha entre <strong>Calcular Total Geral</strong> ou <strong>Calcular por Categoria</strong>.</li>
+      <li>Visualize os resultados na área de texto exibida na janela do plugin.</li>
+      <li>Se desejar, exporte a camada resultante em Shapefile ou CSV.</li>
+    </ol>
+  </section>
+
+  <!-- Informações Técnicas -->
+  <section class="projeto-descricao fade-in">
+    <h2>Informações Técnicas</h2>
+    <ul>
+      <li>Nome do Plugin: Calcular Comprimento Vias</li>
+      <li>Versão: 1.0.0</li>
+      <li>Compatibilidade: QGIS 3.x ou superior</li>
+      <li>Campo criado: <code>comp_km</code></li>
+      <li>CRS utilizado: EPSG:31982</li>
+    </ul>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="projeto-imagens fade-in">
+    <h2>Screenshots</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="../img/Comprimento_vias_categoria.png" alt="Interface do Plugin" class="lightbox-img">
+        <p>Resultado por categorias</p>
+      </div>
+      <div class="card">
+        <img src="../img/Comprimento_vias_totalgeral.png" alt="Resultados do Plugin" class="lightbox-img">
+        <p>Resultado geral</p>
+      </div>
+      <div class="card">
+        <img src="../img/Exemplo_excel_comprimento_vias.png" alt="Exportação" class="lightbox-img">
+        <p>Exemplo de exportação de resultados em CSV</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links -->
+  <section class="projeto-links fade-in">
+    <a href="https://github.com/felipe-bertram-ribeiro/Calcular-comprimento-vias" class="btn" target="_blank" rel="noopener noreferrer">
+      Ver no GitHub
+    </a>
+  </section>
+
+  <!-- Voltar -->
+  <section class="projeto-voltar fade-in">
+    <a href="../portfolio.html" class="btn-link">← Voltar para Portfólio</a>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 Felipe Bertram</p>
+    <div class="social-links">
+      <a href="https://github.com/felipe-bertram-ribeiro" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/felipe-bertram-a1a137390" target="_blank">LinkedIn</a>
+      <a href="mailto:felipebertram3014@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox-container">
+    <img id="lightbox-image" src="" alt="Imagem Ampliada">
+  </div>
+
+  <!-- Script -->
+  <script src="../js/script.js"></script>
+</body>
+</html>

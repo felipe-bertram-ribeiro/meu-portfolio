@@ -903,15 +903,7 @@ body {
   border-radius: 12px;
 }
 
-/* === HERO - FOTO REDONDA === */
-.projeto-hero .hero-imagem img {
-  width: 220px;              /* tamanho da foto */
-  height: 220px;
-  border-radius: 50%;        /* deixa redonda */
-  object-fit: cover;         /* mantém proporção */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* sombra suave */
-  transition: transform 0.3s ease;
-}
+
 
 .projeto-hero .hero-imagem img:hover {
   transform: scale(1.05);    /* zoom leve no hover */

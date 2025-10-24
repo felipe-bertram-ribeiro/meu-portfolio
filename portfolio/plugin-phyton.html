@@ -49,7 +49,27 @@
       <li>Filtro por tipos de rodovias do OpenStreetMap</li>
       <li>Consulta automática à Overpass API e processamento dos resultados</li>
       <li>Criação de camada de saída com vias filtradas no formato LineString</li>
+      <li>Criar camadas temporárias, salvar no arquivo, geopackge, tabela de banco de dados</li>
     </ul>
+  </section>
+
+  <!-- Por que criei -->
+  <section class="projeto-descricao fade-in">
+    <h2>Por que criei esse plugin</h2>
+    <p>Durante alguns projetos de mapeamento e análise de redes viárias no QGIS, percebi que o processo de obter dados de rodovias a partir do OpenStreetMap era repetitivo e demorado. Muitas vezes, precisávamos abrir o site da Overpass Turbo, escrever manualmente a query e depois importar o arquivo resultante para o QGIS — um fluxo pouco prático e suscetível a erros.</p>
+    
+    <p>Para simplificar esse processo, desenvolvi o <strong>Auto Rotas OSM (Overpass)</strong>, um plugin que automatiza todas essas etapas dentro do próprio QGIS. Ele permite definir a área de interesse (por nome ou coordenadas), escolher os tipos de rodovias e, com apenas um clique, obter a camada de vias diretamente no mapa.</p>
+
+    <p>Com o plugin, é possível:</p>
+    <ul>
+      <li>Gerar consultas automáticas à <strong>Overpass API</strong> sem precisar abrir o navegador;</li>
+      <li>Selecionar a área de interesse digitando o nome da cidade, bairro ou região;</li>
+      <li>Definir manualmente coordenadas geográficas (xmin, ymin, xmax, ymax) para maior precisão;</li>
+      <li>Filtrar apenas os tipos de vias relevantes para o projeto (ex: <code>primary</code>, <code>secondary</code>, <code>residential</code>);</li>
+      <li>Gerar automaticamente uma camada de linhas com as vias filtradas prontas para análise no QGIS;</li>
+      <li>Visualizar logs de requisição e status da consulta em tempo real.</li>
+    </ul>
+
   </section>
 
   <!-- Tecnologias -->

@@ -162,3 +162,47 @@ document.addEventListener('DOMContentLoaded', () => {
     card.tabIndex = 0;
   });
 });
+
+// Inicializa o EmailJS
+emailjs.init("7kT_iskhIQJeGh9j4"); // Public Key
+
+const form = document.getElementById("contact-form");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const statusMessage = document.getElementById("status-message");
+const submitButton = form.querySelector("button[type='submit']");
+
+function showStatus(message, color) {
+  statusMessage.textContent = message;
+  statusMessage.style.color = color;
+}
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  if (!nameInput.value || !emailInput.value || !messageInput.value) {
+    showStatus("⚠️ Preencha todos os campos.", "orange");
+    return;
+  }
+
+  const params = {
+    from_name: nameInput.value,
+    from_email: emailInput.value,
+    message: messageInput.value,
+  };
+
+  submitButton.disabled = true;
+
+  emailjs.send("service_sp7zuvj", "template_xpjx3kk", params)
+    .then(() => {
+      showStatus("✅ Mensagem enviada com sucesso!", "green");
+      form.reset();
+    })
+    .catch(() => {
+      showStatus("❌ Erro ao enviar. Tente novamente.", "red");
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+    });
+});

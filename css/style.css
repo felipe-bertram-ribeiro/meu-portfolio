@@ -871,5 +871,51 @@ body {
   }
 }
 
+.sobre-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+  color: #222;
+  font-family: 'Inter', sans-serif;
+}
+
+.sobre-texto {
+  margin-bottom: 50px;
+}
+
+.sobre-texto h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #111;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sobre-texto p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.sobre-texto.destaque {
+  background: #f8f8f8;
+  border-left: 4px solid #333;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* === HERO - FOTO REDONDA === */
+.projeto-hero .hero-imagem img {
+  width: 220px;              /* tamanho da foto */
+  height: 220px;
+  border-radius: 50%;        /* deixa redonda */
+  object-fit: cover;         /* mantém proporção */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* sombra suave */
+  transition: transform 0.3s ease;
+}
+
+.projeto-hero .hero-imagem img:hover {
+  transform: scale(1.05);    /* zoom leve no hover */
+}
+
 
 

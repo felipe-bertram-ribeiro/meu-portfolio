@@ -8,14 +8,16 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <!-- CSS -->
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
-  <!-- Se preferir manter separado, você pode criar ../css/portfolio.css e colocar as regras abaixo lá -->
 </head>
 <body>
 
-  <!-- Navbar (mesma do index) -->
+  <!-- Navbar -->
   <nav class="navbar">
     <a href="../index.html" class="logo">FELIPE</a>
     <ul class="nav-links">
@@ -32,83 +34,89 @@
       <p>Selecione um projeto para ver detalhes — C#, Python, QGIS, Web e mais.</p>
     </div>
     <div class="hero-imagem">
-      <img src="../img/portfolio_hero.png" alt="Portfólio" />
+      <i class="fas fa-laptop-code fa-8x"></i>
     </div>
   </header>
 
+  <!-- Grid de cards -->
+  <main class="portfolio-grid">
 
- <!-- Grid de cards -->
-<main class="portfolio-grid">
-  <!-- Livraria MVC -->
-  <article class="card" data-category="csharp" data-github="https://github.com/felipe-bertram-ribeiro/PROJETO-LIVRARIA-MVC">
-    <img src="../img/livraria_tela_principal.png" alt="Livraria MVC">
-    <div class="card-body">
-      <h3>Livraria MVC</h3>
-      <p>Sistema ASP.NET MVC com SQL Server para gerenciamento de livrarias.</p>
-      <div class="card-actions">
-        <!-- Link que leva direto para a página de detalhe -->
-        <a class="btn-link" href="portfolio/livraria-mvc.html">Ver detalhes</a>
-        <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/PROJETO-LIVRARIA-MVC" target="_blank" rel="noopener">GitHub</a>
+    <!-- Livraria MVC -->
+    <article class="card" data-category="csharp" data-github="https://github.com/felipe-bertram-ribeiro/PROJETO-LIVRARIA-MVC">
+      <img src="../img/livraria_tela_principal.png" alt="Livraria MVC">
+      <div class="card-body">
+        <h3>Livraria MVC</h3>
+        <p>Sistema ASP.NET MVC com SQL Server para gerenciamento de livrarias.</p>
+        <div class="card-actions">
+          <a class="btn-link" href="portfolio/livraria-mvc.html">Ver detalhes</a>
+          <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/PROJETO-LIVRARIA-MVC" target="_blank">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <!-- Plugin QGIS -->
-  <article class="card" data-category="python" data-github="#">
-    <img src="../img/Plugin_python_funcionando.png" alt="Plugin QGIS - NavegarPontos">
-    <div class="card-body">
-      <h3>Auto Rotas OSM</h3>
-      <p>Plugin/solução para baixar e filtrar vias do OpenStreetMap via Overpass API.</p>
-      <div class="card-actions">
-        <a class="btn-link" href="portfolio/plugin-phyton.html">Ver detalhes</a>
-        <a class="small-link" href="#" target="_blank" rel="noopener">GitHub</a>
+    <!-- Plugin QGIS -->
+    <article class="card" data-category="python" data-github="#">
+      <img src="../img/Plugin_python_funcionando.png" alt="Plugin QGIS - NavegarPontos">
+      <div class="card-body">
+        <h3>Auto Rotas OSM</h3>
+        <p>Plugin/solução para baixar e filtrar vias do OpenStreetMap via Overpass API.</p>
+        <div class="card-actions">
+          <a class="btn-link" href="portfolio/plugin-phyton.html">Ver detalhes</a>
+          <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/PLUGIN-QGIS-AUTOROTAS-OSM" target="_blank">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <!-- Leitor NF-e -->
-  <article class="card" data-category="web" data-github="#">
-    <img src="../img/Leitor_NF-E_Principal.png" alt="Leitor NF-e">
-    <div class="card-body">
-      <h3>Leitor de notas fiscais eletrônicas</h3>
-      <p>App em python pra ler e transcrever notas eletrônicas em planilhas no excel.</p>
-      <div class="card-actions">
-        <a class="btn-link" href="portfolio/leitor-NF-e.html">Ver detalhes</a>
-        <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/CONVERTOR-NF" target="_blank" rel="noopener">GitHub</a>
+    <!-- Leitor NF-e -->
+    <article class="card" data-category="web" data-github="#">
+      <img src="../img/Leitor_NF-E_Principal.png" alt="Leitor NF-e">
+      <div class="card-body">
+        <h3>Leitor de notas fiscais eletrônicas</h3>
+        <p>App em Python pra ler e transcrever notas eletrônicas em planilhas no Excel.</p>
+        <div class="card-actions">
+          <a class="btn-link" href="portfolio/leitor-NF-e.html">Ver detalhes</a>
+          <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/CONVERTOR-NF" target="_blank">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <!-- GeoCopy -->
-  <article class="card" data-category="web" data-github="#">
-    <img src="../img/GeoFoto_interface.png" alt="Projeto 3">
-    <div class="card-body">
-      <h3>GeoCopy</h3>
-      <p>Plugin desenolvido com python para copiar fotos georeferenciadas de uma pasta pra outra</p>
-      <div class="card-actions">
-        <a class="btn-link" href="portfolio/Plugin-geocopy.html">Ver detalhes</a>
-        <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/GeoFoto-COPY" target="_blank" rel="noopener">GitHub</a>
+    <!-- GeoCopy -->
+    <article class="card" data-category="web" data-github="#">
+      <img src="../img/GeoFoto_interface.png" alt="GeoCopy">
+      <div class="card-body">
+        <h3>GeoCopy</h3>
+        <p>Plugin desenvolvido com Python para copiar fotos georreferenciadas de uma pasta para outra.</p>
+        <div class="card-actions">
+          <a class="btn-link" href="portfolio/Plugin-geocopy.html">Ver detalhes</a>
+          <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/GeoFoto-COPY" target="_blank">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
 
+    <!-- Novo Projeto -->
+    <article class="card" data-category="python" data-github="https://github.com/felipe-bertram-ribeiro/novo-projeto">
+      <img src="../img/novo_projeto.png" alt="Novo Projeto">
+      <div class="card-body">
+        <h3>Novo Projeto</h3>
+        <p>Descrição breve do novo projeto. Pode ser outro plugin, site ou app que você criou.</p>
+        <div class="card-actions">
+          <a class="btn-link" href="portfolio/novo-projeto.html">Ver detalhes</a>
+          <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/novo-projeto" target="_blank">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </article>
 
-<!-- Novo Projeto -->
-<article class="card" data-category="python" data-github="https://github.com/felipe-bertram-ribeiro/novo-projeto">
-  <img src="../img/novo_projeto.png" alt="Novo Projeto">
-  <div class="card-body">
-    <h3>Novo Projeto</h3>
-    <p>Descrição breve do novo projeto. Pode ser outro plugin, site ou app que você criou.</p>
-    <div class="card-actions">
-      <a class="btn-link" href="portfolio/novo-projeto.html">Ver detalhes</a>
-      <a class="small-link" href="https://github.com/felipe-bertram-ribeiro/novo-projeto" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-</article>
-
-</main>
-
-
+  </main>
 
   <!-- CTA / Ver tudo -->
   <section class="portfolio-cta">
@@ -119,8 +127,8 @@
   <footer class="footer">
     <p>© 2025 Felipe Bertram</p>
     <div class="social-links">
-      <a href="#">GitHub</a>
-      <a href="https://www.linkedin.com/in/felipe-bertram-a1a137390?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">LinkedIn</a>
+      <a href="https://github.com/felipe-bertram-ribeiro" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/felipe-bertram-a1a137390?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
       <a href="#">Email</a>
     </div>
   </footer>

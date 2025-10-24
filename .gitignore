@@ -1,0 +1,39 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node.js 
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build / Dist
+dist/
+build/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
+*.old
+
+# Mac
+._*
+
+# Windows
+ehthumbs.db
+Desktop.ini
+
+# Pasta de imagens geradas automaticamente (opcional)
+# Se você quer versionar as imagens manualmente, não precisa dessa linha
+# img/generated/

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate Road Length - Advanced - Felipe Bertram</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">FELIPE</a>
+    <ul class="nav-links">
+      <li><a href="../about.html">ABOUT</a></li>
+      <li><a href="../portfolio.html" class="active">PORTFOLIO</a></li>
+      <li><a href="../contact.html">CONTACT</a></li>
+    </ul>
+    <div class="lang-switch">
+      <a href="/portfolio/Calcular-comprimento-vias.html">PT-BR</a> |
+      <a href="/en/portfolio/Calcular-comprimento-vias.html" class="active">EN</a>
+    </div>
+    
+  </nav>
+
+  <!-- Hero -->
+  <section class="projeto-hero">
+    <div class="hero-texto">
+      <h1>Calculate Road Length - Advanced</h1>
+      <p>QGIS plugin to calculate total length and length by category of linear features.</p>
+      <p>Allows calculating total feature length, creating additional fields with individual values, and exporting results in Shapefile or CSV.</p>
+    </div>
+    <div class="hero-imagem">
+      <img src="../../img/interface_comprimento_vias.png" alt="Calculate Road Length - Main Screen" class="lightbox-img">
+    </div>
+  </section>
+
+  <!-- About the Project -->
+  <section class="projeto-descricao fade-in">
+    <h2>About the Project</h2>
+    <p>The <strong>Calculate Road Length - Advanced</strong> plugin is a Python QGIS plugin that automates linear feature length calculation. It allows:</p>
+    <ul>
+      <li>Calculating total length of all features in a layer;</li>
+      <li>Grouped calculations by the <code>highway</code> field category;</li>
+      <li>Automatically creating the <code>comp_km</code> field containing each feature's length;</li>
+      <li>Exporting results in reprojected Shapefile (EPSG:31982) or CSV.</li>
+    </ul>
+    <p>Calculations use the EPSG:31982 coordinate system, ensuring metric accuracy even if the original layer is in another CRS.</p>
+  </section>
+
+  <!-- Main Features -->
+  <section class="projeto-descricao fade-in">
+    <h3>Main Features:</h3>
+    <ul>
+      <li>Select vector layers of line type</li>
+      <li>Calculate total length in kilometers</li>
+      <li>Calculate length by <code>highway</code> field category</li>
+      <li>Automatically create <code>comp_km</code> field for each feature</li>
+      <li>Export results to reprojected Shapefile (EPSG:31982)</li>
+      <li>Export results to CSV</li>
+    </ul>
+  </section>
+
+  <!-- Why I Created It -->
+  <section class="projeto-descricao fade-in">
+    <h2>Why I Created This Plugin</h2>
+    <p>In my work, we had to manually calculate road lengths and group by category, which was time-consuming and error-prone. To automate this, I created <strong>Calculate Road Length</strong>, allowing:</p>
+    <ul>
+      <li>Select the desired layer directly in QGIS;</li>
+      <li>Choose between total calculation or by category;</li>
+      <li>Generate an additional field with individual lengths;</li>
+      <li>Easily export results in CSV or Shapefile.</li>
+    </ul>
+  </section>
+
+  <!-- Technologies -->
+  <section class="projeto-tecnologias fade-in">
+    <h2>Technologies Used</h2>
+    <div class="tech-grid">
+      <span>Python</span>
+      <span>QGIS</span>
+      <span>PyQt5</span>
+      <span>Shapefile / Vector Layers</span>
+      <span>CRS EPSG:31982</span>
+    </div>
+  </section>
+
+  <!-- How to Use -->
+  <section class="projeto-descricao fade-in">
+    <h2>How to Use</h2>
+    <ol>
+      <li>Install the plugin by copying the folder into the QGIS plugins folder or using the GitHub repository.</li>
+      <li>Open QGIS and load the vector layer containing linear features.</li>
+      <li>Open the plugin from the <em>Calculate Road Length</em> menu.</li>
+      <li>Select the desired layer and choose between <strong>Total Calculation</strong> or <strong>By Category</strong>.</li>
+      <li>View the results in the text area shown in the plugin window.</li>
+      <li>If needed, export the resulting layer to Shapefile or CSV.</li>
+    </ol>
+  </section>
+
+  <!-- Technical Info -->
+  <section class="projeto-descricao fade-in">
+    <h2>Technical Information</h2>
+    <ul>
+      <li>Plugin Name: Calculate Road Length</li>
+      <li>Version: 1.0.0</li>
+      <li>Compatibility: QGIS 3.x or higher</li>
+      <li>Created Field: <code>comp_km</code></li>
+      <li>CRS Used: EPSG:31982</li>
+    </ul>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="projeto-imagens fade-in">
+    <h2>Screenshots</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="../../img/Comprimento_vias_categoria.png" alt="Plugin Interface" class="lightbox-img">
+        <p>Results by Category</p>
+      </div>
+      <div class="card">
+        <img src="../../img/Comprimento_vias_totalgeral.png" alt="Plugin Results" class="lightbox-img">
+        <p>Overall Results</p>
+      </div>
+      <div class="card">
+        <img src="../../img/Exemplo_excel_comprimento_vias.png" alt="Export Example" class="lightbox-img">
+        <p>Example of CSV Export</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links -->
+  <section class="projeto-links fade-in">
+    <a href="https://github.com/felipe-bertram-ribeiro/Calcular-comprimento-vias" class="btn" target="_blank" rel="noopener noreferrer">
+      View on GitHub
+    </a>
+  </section>
+
+  <!-- Back -->
+  <section class="projeto-voltar fade-in">
+    <a href="../portfolio.html" class="btn-link">← Back to Portfolio</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Felipe Bertram</p>
+    <div class="social-links">
+      <a href="https://github.com/felipe-bertram-ribeiro" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/felipe-bertram-a1a137390" target="_blank">LinkedIn</a>
+      <a href="../email.html">Email</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox-container">
+    <img id="lightbox-image" src="" alt="Enlarged Image">
+  </div>
+
+  <!-- Script -->
+  <script src="../../js/script.js"></script>
+</body>
+</html>

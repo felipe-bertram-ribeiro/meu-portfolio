@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+
+  <title>GeoFoto Copy Plugin - Felipe Bertram</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">FELIPE</a>
+    <ul class="nav-links">
+      <li><a href="../about.html">ABOUT</a></li>
+      <li><a href="../portfolio.html" class="active">PORTFOLIO</a></li>
+      <li><a href="../contact.html">CONTACT</a></li>
+    </ul>
+    <div class="lang-switch">
+      <a href="/portfolio/Plugin-geocopy.html">PT-BR</a> |
+      <a href="/en/portfolio/Plugin-geocopy.html" class="active">EN</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="projeto-hero">
+    <div class="hero-texto">
+      <h1>GeoFoto Copy</h1>
+      <p>Python plugin for QGIS that copies georeferenced photos associated with selected features.</p>
+      <p>Organizes images into destination folders by code/identifier (e.g., R-1) and displays progress and log information during the process.</p>
+    </div>
+    <div class="hero-imagem">
+      <img src="../../img/GeoFoto_interface.png" alt="GeoFoto Copy - Main Interface" class="lightbox-img">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="projeto-descricao fade-in">
+    <h2>About the Project</h2>
+    <p><strong>GeoFoto Copy</strong> is a QGIS plugin developed in Python (PyQt5) that automates the copying of georeferenced photos from a vector layer. It allows users to select features on the map, read file names from a layer field (default: <code>Name</code>), search for those images in a source folder, and copy them to a destination folder organized by plate codes or identifiers.</p>
+    <p>The plugin displays a progress bar, keeps a detailed log with the status of each file (copied / not found), and saves the used paths in <code>config.ini</code> for future sessions.</p>
+  </section>
+
+  <!-- Features -->
+  <section class="projeto-descricao fade-in">
+    <h3>Main Features:</h3>
+    <ul>
+      <li>Select photo source folder</li>
+      <li>Select destination folder for copying</li>
+      <li>Define code/name of the plate or feature for the destination subfolder</li>
+      <li>Copy only photos corresponding to selected features in the layer</li>
+      <li>Show progress bar and log of copied or missing files</li>
+      <li>Automatically save and load source and destination paths</li>
+    </ul>
+  </section>
+
+  <!-- Why I created it -->
+  <section class="projeto-descricao fade-in">
+    <h2>Why I Created This Plugin</h2>
+    <p>At work, we needed to copy specific georeferenced photos that contained certain types of traffic signs. Until then, the process was completely manual — checking the photo name in the layer, finding the file in the source folder, and copying it to the destination, which was time-consuming and error-prone.</p>
+    <p>To automate this task, I created <strong>GeoFoto Copy</strong>. With it, we can:</p>
+    <ul>
+      <li>Select desired photos directly from the QGIS layer;</li>
+      <li>Choose the source folder where the files are stored;</li>
+      <li>Choose the destination folder;</li>
+      <li>Set a code or name (e.g., <code>R-1</code>), automatically creating a subfolder if it doesn’t exist;</li>
+      <li>If the folder already exists, it only copies the selected files;</li>
+      <li>View the copy progress and a detailed log of copied or missing files.</li>
+    </ul>
+    <p>This plugin can also be expanded in the future with features such as:</p>
+    <ul>
+      <li>Filtering photos by multiple plate types simultaneously;</li>
+      <li>Automatically renaming files based on layer attributes;</li>
+      <li>Generating reports summarizing copied photos by category or date;</li>
+      <li>Integration with external databases for data cross-referencing.</li>
+    </ul>
+  </section>
+
+  <!-- Technologies -->
+  <section class="projeto-tecnologias fade-in">
+    <h2>Technologies Used</h2>
+    <div class="tech-grid">
+      <span>Python</span>
+      <span>QGIS</span>
+      <span>PyQt5</span>
+      <span>os</span>
+      <span>shutil</span>
+      <span>configparser</span>
+      <span>Shapefile / Vector Layers</span>
+    </div>
+  </section>
+
+  <!-- How to use -->
+  <section class="projeto-descricao fade-in">
+    <h2>How to Use</h2>
+    <ol>
+      <li>Install the plugin by copying the folder to the QGIS plugin directory or from GitHub.</li>
+      <li>Open QGIS and load the vector layer with a <code>Name</code> field containing photo filenames.</li>
+      <li>Select the features corresponding to the photos you want to copy.</li>
+      <li>Open the plugin from the <em>GeoFoto Copy</em> menu.</li>
+      <li>Select the source and destination folders.</li>
+      <li>Enter the plate or feature code, which will be created as a subfolder in the destination folder.</li>
+      <li>Click <strong>Start Copy</strong> and monitor progress via the log and status bar.</li>
+    </ol>
+  </section>
+
+  <!-- Example -->
+  <section class="projeto-descricao fade-in">
+    <h2>Example of Use</h2>
+    <p>For example, if you have a layer with a <code>Name</code> field containing <code>IMG_001.jpg</code>, <code>IMG_002.jpg</code>, and <code>IMG_003.jpg</code>, and you select two features while running the plugin with plate <strong>R-1</strong>, it will create the folder <code>destination/R-1/</code> and copy only the found files, logging which ones were copied and which were missing.</p>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="projeto-imagens fade-in">
+    <h2>Screenshots</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="../../img/GeoCopy_Exemplo_Selecionado.png" alt="Plugin Dialog" class="lightbox-img">
+        <p>Dialog showing folder selection, code field, progress bar, and log</p>
+      </div>
+      <div class="card">
+        <img src="../../img/GeoCopy_log_funcionando.png" alt="Plugin Log" class="lightbox-img">
+        <p>Log displaying copied and missing files</p>
+      </div>
+      <div class="card">
+        <img src="../../img/GeoCopy_Exemplo_4fotos.png" alt="Destination Folder" class="lightbox-img">
+        <p>Example of destination folder containing the plate subfolder</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links -->
+  <section class="projeto-links fade-in">
+    <a href="https://github.com/felipe-bertram-ribeiro/GeoFoto-COPY" class="btn" target="_blank" rel="noopener noreferrer">
+      View on GitHub
+    </a>
+  </section>
+
+  <!-- Back -->
+  <section class="projeto-voltar fade-in">
+    <a href="../portfolio.html" class="btn-link">← Back to Portfolio</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Felipe Bertram</p>
+    <div class="social-links">
+      <a href="https://github.com/felipe-bertram-ribeiro" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/felipe-bertram-a1a137390" target="_blank">LinkedIn</a>
+      <a href="../email.html">Email</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox-container">
+    <img id="lightbox-image" src="" alt="Enlarged Image">
+  </div>
+
+  <!-- Script -->
+  <script src="../../js/script.js"></script>
+</body>
+</html>

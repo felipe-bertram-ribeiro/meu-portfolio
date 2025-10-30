@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NF-e Reader - Felipe Bertram</title>
+  <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">FELIPE</a>
+    <ul class="nav-links">
+      <li><a href="../about.html">ABOUT</a></li>
+      <li><a href="../portfolio.html" class="active">PORTFOLIO</a></li>
+      <li><a href="../contact.html">CONTACT</a></li>
+    </ul>
+    <div class="lang-switch">
+      <a href="/portfolio/Leitor-NF-e.html">PT-BR</a> |
+      <a href="/en/portfolio/leitor-NF-e.html" class="active">EN</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="projeto-hero">
+    <div class="hero-texto">
+      <h1>NF-e Reader</h1>
+      <p>Python application for reading Electronic Invoices (NF-e) from XML files, generating Excel reports, and featuring a modern and minimalist graphical interface.</p>
+      <p>It allows extracting and analyzing information from multiple XML files simultaneously, with date and value filters, as well as automatic error logging.</p>
+    </div>
+    <div class="hero-imagem">
+      <img src="../../img/Leitor_NF-E_Principal.png" alt="NF-e Reader - Main Interface" class="lightbox-img">
+    </div>
+  </section>
+
+  <!-- About the Project -->
+  <section class="projeto-descricao fade-in">
+    <h2>About the Project</h2>
+    <p><strong>NF-e Reader</strong> was developed to automate the reading of Electronic Invoices (models 55 and 65) in XML format, quickly and easily generating detailed reports in Excel spreadsheets.</p>
+    <p>The application has a simple and intuitive interface built with <strong>CustomTkinter</strong>, allowing folder selection, filter application, and formatted report generation with just a few clicks.</p>
+
+    <h3>Main Features:</h3>
+    <ul>
+      <li>Automatic reading of XML files from NF-e and NFC-e.</li>
+      <li>Modern and minimalist graphical interface.</li>
+      <li>Date and minimum value filters before report generation.</li>
+      <li>Excel report creation with summary and product details tabs.</li>
+      <li>Enhanced formatting: bold headers, alternating colors, and auto-adjusted columns.</li>
+      <li>Progress bar during XML processing.</li>
+      <li>Error and inconsistency logging in <code>logs.txt</code>.</li>
+    </ul>
+  </section>
+
+  <!-- Technologies -->
+  <section class="projeto-tecnologias fade-in">
+    <h2>Technologies Used</h2>
+    <div class="tech-grid">
+      <span>Python</span>
+      <span>pandas</span>
+      <span>openpyxl</span>
+      <span>lxml</span>
+      <span>customtkinter</span>
+    </div>
+  </section>
+
+  <!-- How to Use -->
+  <section class="projeto-descricao fade-in">
+    <h2>How to Use</h2>
+    <ol>
+      <li>Download or clone the project repository.</li>
+      <li>Install dependencies using:
+        <pre><code>pip install -r requirements.txt</code></pre>
+      </li>
+      <li>Run the main program:
+        <pre><code>python main.py</code></pre>
+      </li>
+      <li>In the interface, select the folder containing the NF-e XML files.</li>
+      <li>Optionally set date and value filters if needed.</li>
+      <li>Click <strong>Generate Report</strong> to create the Excel file.</li>
+      <li>The report will be automatically saved in the <code>relatorio_output</code> folder.</li>
+    </ol>
+  </section>
+
+  <!-- Report Structure -->
+  <section class="projeto-descricao fade-in">
+    <h2>Report Structure</h2>
+    <p>The generated report contains two main tabs:</p>
+    <ul>
+      <li><strong>Summary:</strong> shows invoices with key, issuer, recipient, date, total value, and number of items.</li>
+      <li><strong>Details:</strong> lists all products from each invoice, including description, quantity, unit price, and total item value.</li>
+    </ul>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="projeto-imagens fade-in">
+    <h2>Screenshots</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="../../img/Leitor_NF-E_Principal.png" alt="Main Interface" class="lightbox-img">
+        <p>Application Interface</p>
+      </div>
+      <div class="card">
+        <img src="../../img/NF-e_excel.png" alt="Excel Report" class="lightbox-img">
+        <p>Excel report with summary and details tabs</p>
+      </div>
+      <div class="card">
+        <img src="../../img/Filtros_data_nf-e.png" alt="Date and Value Filters" class="lightbox-img">
+        <p>Date and value filters before report generation</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links -->
+  <section class="projeto-links fade-in">
+    <a href="https://github.com/felipe-bertram-ribeiro/CONVERTOR-NF" class="btn" target="_blank" rel="noopener noreferrer">
+      View on GitHub
+    </a>
+  </section>
+
+  <!-- Back -->
+  <section class="projeto-voltar fade-in">
+    <a href="../portfolio.html" class="btn-link">← Back to Portfolio</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Felipe Bertram</p>
+    <div class="social-links">
+      <a href="https://github.com/felipe-bertram-ribeiro" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/felipe-bertram-a1a137390" target="_blank">LinkedIn</a>
+      <a href="../email.html">Email</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox-container">
+    <img id="lightbox-image" src="" alt="Enlarged Image">
+  </div>
+
+  <!-- Script -->
+  <script src="../../js/script.js"></script>
+</body>
+</html>

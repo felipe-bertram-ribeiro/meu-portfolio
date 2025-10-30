@@ -1005,3 +1005,38 @@ body {
       }
     }
 
+/* ===== Lang Switch (corrigido para navbar clara) ===== */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333; /* texto escuro, combina com .nav-links */
+}
+
+/* Links */
+.lang-switch a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.lang-switch a:hover {
+  color: var(--cor-primaria);
+}
+
+.lang-switch a.active {
+  color: var(--cor-primaria);
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .lang-switch {
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.85rem;
+  }
+}

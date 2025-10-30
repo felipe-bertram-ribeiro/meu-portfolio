@@ -1005,14 +1005,14 @@ body {
       }
     }
 
-/* ===== Lang Switch (corrigido para navbar clara) ===== */
+/* ===== Lang Switch (versão responsiva com logo acima no mobile) ===== */
 .lang-switch {
   display: flex;
   align-items: center;
   gap: 6px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #333; /* texto escuro, combina com .nav-links */
+  color: #333;
 }
 
 /* Links */
@@ -1031,12 +1031,28 @@ body {
   text-decoration: underline;
 }
 
-/* Responsivo */
+/* ===== Responsividade ===== */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Faz o PT-BR | EN ficar abaixo do logo */
   .lang-switch {
+    order: 2; /* garante que ele fique depois do logo */
+    margin-top: 8px;
     justify-content: center;
-    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  /* Coloca os links abaixo do lang-switch */
+  .nav-links {
+    order: 3;
     margin-top: 10px;
-    font-size: 0.85rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 }
+
